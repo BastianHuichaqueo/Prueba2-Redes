@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 campus = ["zona core", "campus uno", "campus matriz", "sector outsourcing"]
 dispositivos_por_campus = {campus_name: [] for campus_name in campus}
-
+#Datos De GitHub
 GITHUB_API_URL = "https://api.github.com"
 REPO_OWNER = "BastianHuichaqueo"
 REPO_NAME = "Prueba2-Redes"
@@ -44,7 +44,6 @@ def add_campus():
         else:
             return jsonify(response), status
     return jsonify({"error": "Nombre de campus inválido o ya existe."}), 400
-
 @app.route('/dispositivo', methods=['POST'])
 def add_device():
     campus_name = request.json.get('campus')
